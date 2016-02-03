@@ -18,7 +18,6 @@ http.createServer((req, res) => {
         if(err) { res.writeHeader(500); res.end('Error'); return; }
         var headers = {'Content-Type' : mimeType[path.extname(file)]};
         res.writeHead(200, headers);
-        console.log(file);
         res.end(data);
       });
     }else{
